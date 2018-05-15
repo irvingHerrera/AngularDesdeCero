@@ -32,3 +32,41 @@ let primerDia: DiaCurso;
 primerDia = DiaCurso.MARTES;
 console.log('Primer dia:', primerDia);
 console.log('Primer dia (string):', DiaCurso[primerDia]);
+
+//No es recomendado 
+let miVariable:any;
+miVariable = 5;
+miVariable = 'hola';
+miVariable = true;
+
+const PI = 3.14;
+console.log("PI: ", PI);
+
+let persona:any = {
+    nombre: 'Luis',
+    curso: 'Angular'
+}
+
+const PERSONA:any = {
+    nombre: 'Luis',
+    curso: 'Angular'
+}
+
+
+console.log('PERSONA', PERSONA);
+
+//Mutacion del objeto si se puede
+PERSONA.nombre = 'Juan';
+PERSONA.curso = 'AngularJS';
+
+console.log('PERSONA', PERSONA);
+
+function holaMundo():string {
+    return 'Hola mundo';
+}
+
+function saludar(mensaje:string): void {
+    console.log('Saludo: ', mensaje);
+}
+
+saludar('Me gusta TypeScript');

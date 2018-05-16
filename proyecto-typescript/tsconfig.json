@@ -6,7 +6,8 @@
 
     /* Strict Type-Checking Options */
     "strict": true,
-    "outDir": "./dist"
+    "outDir": "./dist",
+    "noEmitOneError": true
   },
   "include":[
     "./src/**/*.ts"

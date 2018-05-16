@@ -1,4 +1,4 @@
-class Animal {
+export abstract class Animal {
 
     constructor(protected _nombre:string) {
     }
@@ -10,4 +10,6 @@ class Animal {
     set nombre(nombre:string){
         this._nombre = nombre;
     }
+
+    abstract desplazar(): void;
 }

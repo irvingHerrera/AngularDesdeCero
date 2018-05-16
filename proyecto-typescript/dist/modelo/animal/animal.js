@@ -1,4 +1,5 @@
 "use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
 var Animal = /** @class */ (function () {
     function Animal(_nombre) {
         this._nombre = _nombre;
@@ -15,3 +16,4 @@ var Animal = /** @class */ (function () {
     });
     return Animal;
 }());
+exports.Animal = Animal;

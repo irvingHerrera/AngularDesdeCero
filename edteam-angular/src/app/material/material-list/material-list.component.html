@@ -1,19 +1,12 @@
 <mat-list>
-    <mat-list-item>
-        <img *ngIf="estudiante1.fotoURL" mat-line mat-list-avatar [src]="estudiante1.fotoURL" alt="">
-        <img *ngIf="!estudiante1.fotoURL" mat-line mat-list-avatar [src]="DEFAULT_PICTURE" alt="">
-        <span mat-line>{{estudiante1.nombre}}</span>
-        <span mat-line>{{estudiante1.cuidad}}</span>
+    <mat-list-item *ngFor="let estudiante of listaEstudiantes">
+        <img *ngIf="estudiante.fotoURL" mat-line mat-list-avatar [src]="estudiante.fotoURL" alt="">
+        <img *ngIf="!estudiante.fotoURL" mat-line mat-list-avatar [src]="DEFAULT_PICTURE" alt="">
+        <span mat-line>{{estudiante.nombre}}</span>
+        <span mat-line>{{estudiante.cuidad}}</span>
 
     </mat-list-item>
-    <mat-list-item>
-        <img *ngIf="estudiante2.fotoURL" mat-line mat-list-avatar [src]="estudiante2.fotoURL" alt="">
-        <span mat-line>{{estudiante2.nombre}}</span>
-        <span mat-line>{{estudiante2.cuidad}}</span>
-    </mat-list-item>
-    <mat-list-item>
-        <img *ngIf="estudiante3.fotoURL" mat-line mat-list-avatar [src]="estudiante3.fotoURL">
-        <span mat-line>{{estudiante3.nombre}}</span>
-        <span mat-line>{{estudiante3.cuidad}}</span>
-    </mat-list-item>
+
+
+
 </mat-list>

@@ -15,6 +15,8 @@ export class MaterialListComponent implements OnInit {
 
   readonly DEFAULT_PICTURE: string = 'http://cdn.osxdaily.com/wp-content/uploads/2015/08/twitter-ios-icon.jpg';
 
+  listaEstudiantes: Estudiante[];
+
   constructor() { }
 
   ngOnInit() {
@@ -36,6 +38,12 @@ export class MaterialListComponent implements OnInit {
       cuidad: 'Bogota',
       fotoURL: 'https://orig00.deviantart.net/f5aa/f/2016/199/7/6/profile_picture_by_random_explosion-daag6xh.png'
     };
+
+    this.listaEstudiantes = [
+      this.estudiante1, 
+      this.estudiante2, 
+      this.estudiante3
+    ];
 
     setTimeout(() => {
       this.estudiante3 = {

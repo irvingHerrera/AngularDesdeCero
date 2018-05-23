@@ -53,8 +53,10 @@ export class MaterialListComponent implements OnInit {
         fotoURL: 'https://orig00.deviantart.net/f5aa/f/2016/199/7/6/profile_picture_by_random_explosion-daag6xh.png'
       }
     }, 3000);
+  }
 
-
+  onMouseClick($event : Estudiante){
+  console.log("onMouseClick", $event.nombre);
   }
 
 }

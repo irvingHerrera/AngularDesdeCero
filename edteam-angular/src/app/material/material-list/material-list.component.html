@@ -1,17 +1,18 @@
 <mat-list>
     <mat-list-item>
-        <img mat-line mat-list-avatar src="{{estudiante1.fotoURL}}" alt="">
+        <img *ngIf="estudiante1.fotoURL" mat-line mat-list-avatar [src]="estudiante1.fotoURL" alt="">
+        <img *ngIf="!estudiante1.fotoURL" mat-line mat-list-avatar [src]="DEFAULT_PICTURE" alt="">
         <span mat-line>{{estudiante1.nombre}}</span>
         <span mat-line>{{estudiante1.cuidad}}</span>
 
     </mat-list-item>
     <mat-list-item>
-        <img mat-line mat-list-avatar src="https://i2.wp.com/ausdroid.net/wp-content/uploads/2017/05/contacts.png?resize=300%2C300" alt="">
+        <img *ngIf="estudiante2.fotoURL" mat-line mat-list-avatar [src]="estudiante2.fotoURL" alt="">
         <span mat-line>{{estudiante2.nombre}}</span>
         <span mat-line>{{estudiante2.cuidad}}</span>
     </mat-list-item>
     <mat-list-item>
-        <img mat-line mat-list-avatar src="https://i2.wp.com/ausdroid.net/wp-content/uploads/2017/05/contacts.png?resize=300%2C300" alt="">
+        <img *ngIf="estudiante3.fotoURL" mat-line mat-list-avatar [src]="estudiante3.fotoURL">
         <span mat-line>{{estudiante3.nombre}}</span>
         <span mat-line>{{estudiante3.cuidad}}</span>
     </mat-list-item>

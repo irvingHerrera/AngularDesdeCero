@@ -1,7 +1,7 @@
 <h3>Input basicos</h3>
 <div>
     <mat-form-field>
-        <input type="text" placeholder="Nombre" [value]="usuario.nombre" (blur)="onBlur($event)" (keyup)="onKeyUp($event)" matInput>
+        <input type="text" matInput [placeholder]="placeholder.nombre" [value]="usuario.nombre" (blur)="onBlur($event)" (keyup)="onKeyUp($event)" >
     </mat-form-field>
 </div>
 

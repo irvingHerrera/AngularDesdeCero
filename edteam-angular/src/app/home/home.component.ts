@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Apoo } from 'src/app/shared/model/apoo';
+import { NasaApiService } from '../shared/service/nasa-api.service';
 
 @Component({
   selector: 'ih-home',
@@ -8,20 +9,11 @@ import { Apoo } from 'src/app/shared/model/apoo';
 })
 export class HomeComponent implements OnInit {
 
-  appod: Apoo;
-
-  constructor() { }
+  apoo: Apoo;
+  constructor(private nasaApi: NasaApiService) { }
 
   ngOnInit() {
-    this.appod = {
-      title : 'NGC 2261: Hubble´s Variable Nebula',
-      date: '2018-05-23',
-      explanation: 'lorem lorem lorem',
-      hdurl: 'lorem lorem lorem',
-      media_type: 'image',
-      service_version: 'v1',
-      url: 'https://i.ytimg.com/vi/3yHOHwDi94Y/hqdefault.jpg'
-    };
+    this.apoo = this.nasaApi.getApoo();
   }
 
 }

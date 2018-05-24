@@ -12,7 +12,7 @@ export class NasaApiService {
       explanation: 'lorem lorem lorem',
       hdurl: 'lorem lorem lorem',
       media_type: 'image',
-      service_version: 'v1',
+      service_version: 'v1', 
       url: 'https://i.ytimg.com/vi/3yHOHwDi94Y/hqdefault.jpg'
     };
 

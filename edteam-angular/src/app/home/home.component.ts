@@ -9,11 +9,11 @@ import { NasaApiService } from '../shared/service/nasa-api.service';
 })
 export class HomeComponent implements OnInit {
 
-  apoo: Apoo;
+  appod: Apoo;
   constructor(private nasaApi: NasaApiService) { }
 
   ngOnInit() {
-    this.apoo = this.nasaApi.getApoo();
+    this.appod = this.nasaApi.getApoo();
   }
 
 }

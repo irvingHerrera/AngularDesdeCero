@@ -1,5 +1,5 @@
-<div>
-    <mat-card>
+<div class="card-container">
+    <mat-card class="card-content">
         <h3>Astronomy Picture of the Day</h3>
         <mat-card-header>
             <img mat-card-avatar src="https://upload.wikimedia.org/wikipedia/commons/2/25/Nasa-logo.gif" alt="">
@@ -10,6 +10,17 @@
         </mat-card-header>
 
         <img mat-card-image [src]="appod.url" alt="">
+
+        <mat-card-content>
+            <p>
+                {{appod.explanation}}
+            </p>
+        </mat-card-content>
+
+        <mat-card-actions>
+            <button mat-button>Like</button>
+            <button mat-button>Share</button>
+        </mat-card-actions>
 
     </mat-card>
 </div>

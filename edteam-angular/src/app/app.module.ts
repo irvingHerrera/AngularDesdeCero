@@ -7,11 +7,13 @@ import { AppComponent } from './app.component';
 import { MaterialModule } from './material/material.module';
 import { HomeComponent } from './home/home.component';
 import { NasaApiService } from './shared/service/nasa-api.service';
+import { LowerCasaPipe } from './shared/pipes/lower-casa.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent
+    HomeComponent,
+    LowerCasaPipe
   ],
   imports: [
     BrowserModule,

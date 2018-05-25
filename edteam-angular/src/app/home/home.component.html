@@ -5,9 +5,9 @@
             <img mat-card-avatar src="https://upload.wikimedia.org/wikipedia/commons/2/25/Nasa-logo.gif" alt="">
             <mat-card-title>
                 {{appod.title}}
-                
+
             </mat-card-title>
-            <mat-card-subtitle>{{appod.date}}</mat-card-subtitle>
+            <mat-card-subtitle>{{appod.date | date : 'fullDate' | lowerCasa}}</mat-card-subtitle>
         </mat-card-header>
 
         <img mat-card-image [src]="appod.url" alt="">

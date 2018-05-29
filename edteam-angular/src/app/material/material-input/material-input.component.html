@@ -1,9 +1,13 @@
 <h3>Input basicos</h3>
 <div>
     <mat-form-field>
-        <input type="text" matInput [placeholder]="placeholder.nombre" [value]="usuario.nombre" (blur)="onBlur($event)" (keyup)="onKeyUp($event)" >
+        <input type="text" matInput [placeholder]="placeholder.nombre" [(ngModel)]="usuario.nombre" (blur)="onBlur($event)" (keyup)="onKeyUp($event)">
     </mat-form-field>
 </div>
+
+<pre>
+    {{usuario | json}}
+</pre>
 
 <h3>Input Prefijos y Sufijos</h3>
 <div>

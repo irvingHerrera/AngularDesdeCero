@@ -11,11 +11,24 @@ export class MarsComponent implements OnInit {
 
   marsImages:MarsImage[];
   camaras: string[] = ['MAST','CHEMCAM','NAVCAM'];
+  currentCamera: string;
 
   constructor(private servicio: NasaApiService) { }
 
   ngOnInit() {
-    this.servicio.getMarsImages('CHEMCAM').subscribe(data => {
+    this.currentCamera = this.camaras[0];
+    this.refreshView('MAST');
+  }
+
+  onSelectCamera(camera: string){
+    this.refreshView(camera);
+  }
+
+  private refreshView(camera: string){
+    console.log('camera', camera);
+    this.servicio.getMarsImages(camera).subscribe(data => {
+      console.log("data", data);
+      this.marsImages = [];
       this.marsImages = data.photos;
     });
   }

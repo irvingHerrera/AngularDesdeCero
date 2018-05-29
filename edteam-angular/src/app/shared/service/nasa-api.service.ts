@@ -15,7 +15,7 @@ export class NasaApiService {
 
   getApoo(): Observable<Apoo>{
     //return this.DATA;
-    return this.httpClient.get<Apoo>(APOD_URL + '?api_key=' + API_KEY);
+    return this.httpClient.get<Apoo>(`${APOD_URL}?api_key=${API_KEY}`);
   }
 
 }
